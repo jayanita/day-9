@@ -1,0 +1,25 @@
+// Function to add a node in the front of doubly linked list
+public void addNodeFront(int val) {
+    
+    // Creating a new node
+    Node temp = new Node(val, head, null);
+    
+    // checking if head is null
+    if(head != null ) 
+    {
+        // Assigning temp to head.prev
+        head.prev = temp;
+    }
+    
+    // Assigning temp to head
+    head = temp;
+    
+    // Cheking if tail is null
+    if(tail == null) 
+    { 
+        // Assigning temp to tail
+        tail = temp;
+    }
+    
+    System.out.println("New node added: " + val);
+}
